@@ -2,6 +2,10 @@
    GLOBAL THEME
 ========================================================= */
 
+#MainMenu, footer, header {
+                visibility: hidden;
+}
+
 .stApp {
   background-color: #0A0D14;
   color: #fff;
