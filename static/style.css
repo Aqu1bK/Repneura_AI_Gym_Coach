@@ -183,3 +183,8 @@ div[role="menuitem"] {
   background-color: #181D2A !important;
   color: #fff;
 }
+
+/* Hide the collapse button so sidebar stays permanent */
+[data-testid="stSidebarCollapseButton"] {
+  display: none !important;
+}
