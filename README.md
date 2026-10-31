@@ -66,35 +66,35 @@ Your personal AI fitness coach that watches your form through your webcam in rea
 ┌────────────────────────────────────────────────────────────────────┐
 │                      LIVE WORKOUT SESSION                          │
 ├────────────────────────────────────────────────────────────────────┤
-│                                                                     │
+│                                                                    │
 │  ┌──────────┐    ┌──────────────┐    ┌─────────────────────────┐   │
-│  │  Webcam  │───▶│   WebRTC     │───▶│   MediaPipe Pose        │   │
+│  │  Webcam  │───▶│   WebRTC    │───▶│   MediaPipe Pose        │   │
 │  │  Feed    │    │   Stream     │    │   33 Body Landmarks     │   │
 │  └──────────┘    └──────────────┘    └───────────┬─────────────┘   │
-│                                                   │                 │
-│                    ┌──────────────────────────────┘                │
+│                                                  │                 │
+│                    ┌─────────────────────────────┘                 │
 │                    ▼                                               │
-│  ┌─────────────────────────────────────────────┐                  │
-│  │         Exercise Analysis Engine            │                  │
-│  ├─────────────────────────────────────────────┤                  │
-│  │  • Rep Counter (movement pattern detection) │                  │
-│  │  • Joint Angle Calculator (knee, back)      │                  │
-│  │  • Depth Classifier (shallow/parallel/deep) │                  │
-│  │  • Set Tracker (auto-set progression)       │                  │
-│  └─────────────────────┬───────────────────────┘                  │
+│  ┌─────────────────────────────────────────────┐                   │
+│  │         Exercise Analysis Engine            │                   │
+│  ├─────────────────────────────────────────────┤                   │
+│  │  • Rep Counter (movement pattern detection) │                   │
+│  │  • Joint Angle Calculator (knee, back)      │                   │
+│  │  • Depth Classifier (shallow/parallel/deep) │                   │
+│  │  • Set Tracker (auto-set progression)       │                   │
+│  └─────────────────────┬───────────────────────┘                   │
 │                        ▼                                           │
-│  ┌─────────────────────────────────────────────┐                  │
-│  │    Qwen2.5-Instruct via OpenRouter          │                  │
-│  │    (OpenAI SDK Compatible)                   │                  │
-│  │  Form analysis → Feedback generation → gTTS │                  │
-│  └─────────────────────────────────────────────┘                  │
+│  ┌─────────────────────────────────────────────┐                   │
+│  │    Qwen2.5-Instruct via OpenRouter          │                   │
+│  │    (OpenAI SDK Compatible)                  │                   │
+│  │  Form analysis → Feedback generation → gTTS │                   │
+│  └─────────────────────────────────────────────┘                   │
 │                        ▼                                           │
-│  ┌─────────────────────────────────────────────┐                  │
-│  │          Streamlit Dashboard                 │                  │
-│  │  Live video + Metrics + Progress + Feedback  │                  │
-│  └─────────────────────────────────────────────┘                  │
-│                                                                     │
-└─────────────────────────────────────────────────────────────────────┘
+│  ┌─────────────────────────────────────────────┐                   │
+│  │          Streamlit Dashboard                │                   │
+│  │  Live video + Metrics + Progress + Feedback │                   │
+│  └─────────────────────────────────────────────┘                   │
+│                                                                    │
+└────────────────────────────────────────────────────────────────── ─┘
 ```
 
 | Technology | Role | Why This Stack |
@@ -150,13 +150,13 @@ Joint angles + Depth status + Set progress
 ## 📊 Live Dashboard Layout
 
 ```
-┌──────────────────────────────────────────────────────────┐
-│  🏋️ REPNEURA AI GYM COACH                                │
+┌──────────────────────────────────────────────────────────┐ 
+│  🏋️ REPNEURA AI GYM COACH                               │
 ├────────────────────┬─────────────────────────────────────┤
 │    LEFT SIDEBAR    │          MAIN CANVAS                │
 │                    │                                     │
 │  📋 WORKOUT PLAN   │  ┌─────────────────────────────┐   │
-│  • Exercise: Squat │  │                             │   │
+│  • Exercise: Squat │  │                              │   │
 │  • Sets: 3         │  │    LIVE WEBCAM FEED          │   │
 │  • Reps: 10        │  │    with skeleton overlay     │   │
 │                    │  │    + rep count badge         │   │
